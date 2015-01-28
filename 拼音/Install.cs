@@ -19,8 +19,10 @@ namespace 拼音
                 ? Environment.GetEnvironmentVariable("HOME")
                 : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%");
 
-            var snippy = home + "/.snippy/";
+            var snippy = home + "/.snipyin/";
             Directory.CreateDirectory(snippy);
+
+            Console.WriteLine("created directory " + snippy);
 
             foreach (var v in Enum.GetNames(typeof(Tones.Vowel)))
             {
@@ -30,7 +32,9 @@ namespace 拼音
                     var tone = (Tones.Tone)Enum.Parse(typeof(Tones.Tone), ((int)t).ToString(), false);
                     var toneNo = ((int)t).ToString();
                     toneNo = toneNo.Replace("t", String.Empty);
-                    File.WriteAllText(snippy + v + toneNo, Tones.GetVowel(vowel, tone).ToString());
+                    var replace = Tones.GetVowel(vowel, tone).ToString();
+                    File.WriteAllText(snippy + v + toneNo, replace);
+                    Console.WriteLine("Wrote mapping " + snippy + v + toneNo + " : " + replace);
                 }
             }
                 
@@ -38,7 +42,7 @@ namespace 拼音
 
         private static void RegisterSnippy()
         {
-            File.Copy("snippy.sh", "/usr/bin/snippy.sh", true);
+            File.Copy("snipyin.sh", "/usr/bin/snipyin.sh", true);
         }
     }
 }
