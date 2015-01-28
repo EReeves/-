@@ -6,13 +6,8 @@ namespace 拼音
 {
     public static class Install
     {
-        public static void Start()
-        {
-            RegisterSnippets();
-            RegisterSnippy();
-        }
 
-        private static void RegisterSnippets()
+        public static void InstallSnippets()
         {
             var home = (Environment.OSVersion.Platform == PlatformID.Unix || 
                 Environment.OSVersion.Platform == PlatformID.MacOSX)
@@ -24,23 +19,28 @@ namespace 拼音
 
             Console.WriteLine("created directory " + snippy);
 
+            var result = new StringBuilder();
+
             foreach (var v in Enum.GetNames(typeof(Tones.Vowel)))
             {
                 foreach (var t in Enum.GetValues(typeof(Tones.Tone)))
                 {     
                     var vowel = (Tones.Vowel)Enum.Parse(typeof(Tones.Vowel), v, false);
                     var tone = (Tones.Tone)Enum.Parse(typeof(Tones.Tone), ((int)t).ToString(), false);
+
                     var toneNo = ((int)t).ToString();
                     toneNo = toneNo.Replace("t", String.Empty);
                     var replace = Tones.GetVowel(vowel, tone).ToString();
-                    File.WriteAllText(snippy + v + toneNo, replace);
-                    Console.WriteLine("Wrote mapping " + snippy + v + toneNo + " : " + replace);
+
+                    result.AppendLine("[" + v + toneNo + "] " + replace);
                 }
             }
+
+            File.WriteAllText(snippy + "/.vowels", result.ToString());
                 
         }
 
-        private static void RegisterSnippy()
+        public static void InstallBinary()
         {
             File.Copy("snipyin.sh", "/usr/bin/snipyin.sh", true);
         }

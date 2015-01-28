@@ -10,11 +10,14 @@ xdotool key shift+Left
 xdotool key shift+Left
 
 xdotool key ctrl+x
-sleep 0.1s # to work reliably in Firefox
+
 SELECTION=`xsel -b`
 
 # read snippet file
-xsel -b -i < ~/.snipyin/${SELECTION}
+#xsel -b -i < ~/.snipyin/${SELECTION}
+LC_ALL=C
+TEXT=`grep -F "${SELECTION}" ~/.snipyin/.vowels | sed "s/\[${SELECTION}\] //"`
+echo -n ${TEXT} | xsel -b -i
 
 # paste snippet
 xdotool key ctrl+v
