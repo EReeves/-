@@ -1,16 +1,14 @@
 ﻿<Properties StartupItem="拼音/拼音.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="拼音/Scripts/snipyin.sh">
+  <MonoDevelop.Ide.Workbench ActiveDocument="拼音/Install.cs">
     <Files>
-      <File FileName="拼音/Program.cs" Line="29" Column="29" />
+      <File FileName="拼音/Program.cs" Line="42" Column="42" />
       <File FileName="拼音/MainWindow.cs" Line="1" Column="1" />
-      <File FileName="拼音/Tones.cs" Line="15" Column="15" />
-      <File FileName="拼音/X11HotKey.cs" Line="1" Column="1" />
-      <File FileName="拼音/Install.cs" Line="13" Column="13" />
-      <File FileName="拼音/snippy.sh" Line="19" Column="19" />
-      <File FileName="拼音/run.sh" Line="3" Column="3" />
-      <File FileName="拼音/Scripts/install.sh" Line="1" Column="1" />
-      <File FileName="拼音/Scripts/snipyin.sh" Line="1" Column="1" />
+      <File FileName="拼音/Tones.cs" Line="1" Column="1" />
+      <File FileName="拼音/Install.cs" Line="38" Column="38" />
+      <File FileName="拼音/Scripts/install.sh" Line="10" Column="10" />
+      <File FileName="拼音/Scripts/snipyin.sh" Line="20" Column="20" />
+      <File FileName="../.bash_history" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

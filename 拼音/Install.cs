@@ -16,8 +16,10 @@ namespace 拼音
 
             var snippy = home + "/.snipyin/";
             Directory.CreateDirectory(snippy);
+            File.Copy(".mandarin", snippy + "/.mandarin", true);
 
             Console.WriteLine("created directory " + snippy);
+
 
             var result = new StringBuilder();
 

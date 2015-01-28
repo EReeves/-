@@ -6,8 +6,18 @@ CLIPBOARD=`xsel -b`
 
 # read the abbreviation
 sleep 0.1s
-xdotool key shift+Left
-xdotool key shift+Left
+
+if [ "$1" = "vowel" ]
+	then
+		xdotool key shift+Left
+		xdotool key shift+Left
+		FILE=~/.snipyin/.vowels
+
+else
+		xdotool key control+shift+Left
+		FILE=~/.snipyin/.mandarin
+		sleep 0.3s
+fi
 
 xdotool key ctrl+x
 
@@ -15,8 +25,7 @@ SELECTION=`xsel -b`
 
 # read snippet file
 #xsel -b -i < ~/.snipyin/${SELECTION}
-LC_ALL=C
-TEXT=`grep -F "${SELECTION}" ~/.snipyin/.vowels | sed "s/\[${SELECTION}\] //"`
+TEXT=`grep -m 1 "\[${SELECTION}\]" $FILE | sed "s/\[${SELECTION}\] //"`
 echo -n ${TEXT} | xsel -b -i
 
 # paste snippet
