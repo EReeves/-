@@ -1,0 +1,8 @@
+/home/evan/拼音/拼音/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/evan/拼音/拼音/obj/x86/Debug/拼音.gtk-gui.gui.stetic
+/home/evan/拼音/拼音/bin/Debug/拼音.exe.mdb
+/home/evan/拼音/拼音/bin/Debug/拼音.exe
+/home/evan/拼音/拼音/obj/x86/Debug/拼音.exe
+/home/evan/拼音/拼音/obj/x86/Debug/拼音.exe.mdb
+/home/evan/拼音/拼音/bin/Debug/snippy.sh
+/home/evan/拼音/拼音/bin/Debug/run.sh
