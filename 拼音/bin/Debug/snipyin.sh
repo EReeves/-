@@ -7,16 +7,18 @@ CLIPBOARD=`xsel -b`
 # read the abbreviation
 sleep 0.1s
 
+modprobe -r usbhid #disable keyboard
+
 if [ "$1" = "vowel" ]
 	then
-		xdotool key shift+Left
-		xdotool key shift+Left
+		xdotool key --delay 1 --clearmodifiers shift+Left
+		xdotool key --delay 1 --clearmodifiers shift+Left
 		FILE=~/.snipyin/.vowels
 
 else
-		xdotool key control+shift+Left
+		xdotool key --delay 1 --clearmodifiers control+shift+Left
 		FILE=~/.snipyin/.mandarin
-		sleep 0.3s
+		sleep 0.1s
 fi
 
 xdotool key ctrl+x
@@ -36,3 +38,4 @@ echo $CLIPBOARD > /tmp/snippytemp
 sleep 0.1s
 xsel -b -i < /tmp/snippytemp
 
+modprobe usbhid #enable keyboard
