@@ -10,7 +10,7 @@ Requires mono, xsel and xdotool
 - cd to bin
 - install with install.sh as root.
 
-*You will need to bind your own shortcuts, how you do this depends on the distribution but usually it's under your keyboard settings.*
+*You will need to bind your own shortcuts, how you do this depends on the distribution but usually it's under your keyboard settings.* **Note:** Modifier keys may cause some issues because of xdotool, Shift should work though. 
 
 - For converting a vowel to pinyin bind *snipyin.sh vowel*
 - For converting pinyin to chinese characters bind *snipyin.sh*
