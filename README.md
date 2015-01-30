@@ -23,4 +23,4 @@ Diacritics can be added to vowels by typing the tone number and then pressing yo
 You can then convert the Pinyin to Chinese characters by hitting your other shortcut.
 - hǎo turns in to 好 
 
-
+Short example video: https://db.tt/eJrd6Pge
