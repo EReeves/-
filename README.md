@@ -2,6 +2,8 @@
 
 A Pinyin/Chinese writing utility for linux.
 
+This was a small hobby project, you would most likely be better off with something like fcitx which lets you use a corporation backed dictionary/algorithm like Google Pinyin.
+
 Requires mono, xsel and xdotool
 
 **Build/Install**
