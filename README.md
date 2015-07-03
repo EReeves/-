@@ -22,7 +22,7 @@ Requires mono, xsel and xdotool
 Diacritics can be added to vowels by typing the tone number and then pressing your vowel shortcut.
 - "ni3" turns in to nǐ
 
-You can then convert the Pinyin to Chinese characters by hitting your other shortcut.
+You can then convert the Pinyin to Chinese characters by hitting your other shortcut. (Uses a very poor dictionary, not recommended.)
 - hǎo turns in to 好 
 
 Short example video: https://db.tt/eJrd6Pge
